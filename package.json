@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js"
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js",
+    "test:watch": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js --watch",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "@babel/register": "^7.15.3",
     "chai": "^4.3.4",
     "mocha": "^9.1.1",
+    "nyc": "^15.1.0",
     "regenerator-runtime": "^0.13.9",
     "supertest": "^6.1.6"
   },

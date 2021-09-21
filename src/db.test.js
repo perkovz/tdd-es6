@@ -16,5 +16,11 @@ describe('getUserByUsername', () => {
 
   const db = client.db('TEST_DB');
 
+  const fakeData = [{
+    id: '123',
+    username: 'abc',
+    email: 'abc@gmail.com'
+  }];
+
   client.close();
 });
