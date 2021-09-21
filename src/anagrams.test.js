@@ -21,4 +21,12 @@ describe('isAnagram - basic functionality', () => {
     const actual2 = isAnagram('below', 'elbows');
     expect(actual2).to.equal(expected);
   });
+
+  // not anagrams
+  // ex.  'listens' 'silent'
+  it('returns false when the strings have the same letters in different quantities', () => {
+    const expected = false;
+    const actual = isAnagram('listens', 'silent');
+    expect(actual).to.equal(expected);
+  });
 });
